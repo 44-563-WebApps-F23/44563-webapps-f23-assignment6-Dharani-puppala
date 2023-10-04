@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> dharani cruise
+
+        </title>
+    </head>
+ 
+<body>
+
+<h2> Dharani goes on a
+    cruise</h2>
+
+<form>
+
+    <input type ="checkbox" id="check1" name="form1_age"  value="True"> 
+    <label for="check1">Shares Cabin </label><br>
+
+    
+    <input type ="checkbox" id="check2" name="form1_nick" value="True">
+    <label for="check2">Breakfast </label> <br>
+    
+    <input type ="checkbox" id="check3" name="form1_nick" value="False"> 
+    <label for="check3">Pool Pass </label><br>
+
+    <input type="button" onclick="selectCruise()" value="Get values from form">
+</form>
+
+
+<p id="Select">This text will be replaced </p>
+
+<script> 
+    let my_curise={};
+    function selectCruise(){
+    var SharesCabin = document.getElementById('check1').checked;
+    var Breakfast = document.getElementById('check2').checked;
+    var PoolPass = document.getElementById('check3').checked;
+    my_curise.shares= SharesCabin ;
+    my_curise.Break=Breakfast
+    my_curise.Pool= PoolPass
+    document.getElementById("Select").innerHTML=JSON.stringify(my_curise);
+    }
+</script>
+<form>
+    <label for="check1">Enter the number of days </label>
+    <input type ="text" id="days" name="form1_age"  value="days" checked> <br>
+
+    <label for="check2">Enter price </label>
+    <input type ="text" id="price" name="form1_nick" value="true" checked> <br>
+    
+
+    <input type="button" onclick="updateCruise()" value="Get values from form">
+</form>
+<p id="update">This text will be replaced </p>
+<script>  
+    function updateCruise() {
+         var days = document.getElementById('days').value;
+         var price = document.getElementById('price').value;
+         my_curise["days"]=days;
+         my_curise["price"]=price;
+         document.getElementById("update").innerHTML=JSON.stringify(my_curise);
+    }
+</script>
+
+</body>
+</html> 

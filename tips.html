@@ -26,20 +26,65 @@
 function tips(){
     var base = parseInt(document.getElementById('amounts').value);
     var tip = parseInt(document.getElementById('tip').value);
-    console.log("base: ",base)
-    console.log("tip: ",tip)
+    
     var myOutput="" ;
+    var toShow="";
     myOutput="Tip are: "+tip+"%"+ "is"+(base*tip)/100+";";
     for(i=0;i<4;i++){
         tip=tip+4;
         price=(base*tip)/100;
-        myOutput=myOutput + tip+ "%" + "is " + price +";";
+        
+        toShow=toShow+ tip+ "%"+"is"+ price+";" ;
 
 
-    } document.getElementById("Showtip").innerHTML=myOutput;
+    } myOutput=myOutput+toShow
+    document.getElementById("Showtip").innerHTML=myOutput;
 
     
    
+}
+</script>
+<form>
+    <input type="radio" id="redcol" name="color" value="sum">
+    <label for="sum">sum</label></br>
+  
+    <input type="radio" id="bluecol" name="color" value="diffrence">
+    <label for="diff">diff</label></br>
+  
+    <input type="radio" id="greencol" name="color" value="product">
+    <label for="mult">Product</label></br>
+
+    
+    <input type="button" onclick="chooseOp()" value=" values of radio group">
+  </form>
+
+  <p id="radios">replaced</p>
+
+  
+
+</form>
+<script>
+function chooseOp(){
+    var base= parseInt(document.getElementById('amounts').value);
+    var tip=parseInt(document.getElementById('tip').value);
+    var ans=0;
+
+    if(document.getElementById('redcol').checked)
+    {  
+        ans=base+tip;
+    }
+
+    if(document.getElementById('bluecol').checked)
+    {  
+        ans=base-tip;
+    }
+
+    if(document.getElementById('greencol').checked)
+    {  
+        ans=base*tip;
+    }
+
+    document.getElementById("radios").innerHTML = ans;
 }
 </script>
 
