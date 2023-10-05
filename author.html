@@ -31,14 +31,27 @@ function checkAuthor (){
         good = good + 1
         document.getElementById("result").innerHTML = "Good : "+ good 
     } else {
-        alert("Sorry")
+        
         oops = oops + 1
+        if(oops>7){
+            onclick=incorrectgessus();
+            document.getElementById("incorrectgessus").innerHTML="guesses count exceeded."
+        }else{
+            alert("sorry");
+        }
         document.getElementById("result").innerHTML = "Oops : "+ oops
     }
 }
+function incorrectgessus(){
+    alert("sorry, ran out of guesses.")
+}
+
 
 
 </script>
+<p id ="incorrectgessus">
+    this will be replaced.
+</p>
 <div class="container " >
     <img src="Paris.jpg" id ='city' class="img_fluid" alt="paris" height="100" width="100" onclick="selectImage()">
 </div>
