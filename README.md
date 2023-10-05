@@ -2,8 +2,8 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 host data
-https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-Dharani-puppala/author.html
-https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-Dharani-puppala/tips.html
+https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-Dharani-puppala/author.html <br>
+https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-Dharani-puppala/tips.html<br>
 https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-Dharani-puppala/cruise.html
 
 
